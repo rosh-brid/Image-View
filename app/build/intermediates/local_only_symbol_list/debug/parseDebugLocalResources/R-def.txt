@@ -1,6 +1,20 @@
 R_DEF: Internal format may change without notice
 local
+color bg
+color bg_log
+color bg_pop
+color biru
+color tulisan
+color ungu
+drawable bg_campur
 drawable bg_kotak
+drawable gambar
+drawable gambar_rusak
+drawable ikon
+drawable keluar
+drawable nav
+drawable tema
+drawable tutup
 id dua
 id empat
 id gambar
@@ -9,10 +23,13 @@ id grid
 id init
 id inti
 id jumlah
+id keluar
 id nama
 id nama_file
+id nav
 id pusat
 id satu
+id tema
 id tempat_file
 id tempat_folder
 id tiga
@@ -23,5 +40,8 @@ layout item_list_gambar
 layout item_list_kosong
 layout item_tempat_folder
 layout pop_penampil_gambar
+string klik_buka
+string nama_apk
+string terpilih_kosong
 style AppTheme
 style Base.AppTheme

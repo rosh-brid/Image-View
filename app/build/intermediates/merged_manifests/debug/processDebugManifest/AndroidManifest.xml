@@ -29,8 +29,10 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="true"
-        android:label="Image Viewers"
+        android:icon="@drawable/ikon"
+        android:label="@string/nama_apk"
         android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ikon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity

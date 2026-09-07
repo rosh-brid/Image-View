@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#000000</color>
+    <color name="bg_log">#30777777</color>
+    <color name="bg_pop">#777777</color>
+    <color name="biru">#75337777</color>
+    <color name="tulisan">#ffffff</color>
+    <color name="ungu">#75773377</color>
+    <style name="AppTheme" parent="Base.AppTheme"/>
+    <style name="Base.AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+    <item name="android:windowBackground">@drawable/bg_campur</item>
+    <item name="android:textColor">@color/tulisan</item>
+  </style>
+</resources>

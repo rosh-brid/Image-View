@@ -1,17 +1,24 @@
 package rosh.gambar
 
-import android.net.Uri
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.widget.GridLayout
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import rosh.gambar.lib.Folder
 import rosh.gambar.lib.MediaImage
+import rosh.gambar.lib.Klik
+
+import android.graphics.*
+import android.net.Uri
+import android.os.*
+import android.provider.MediaStore
+import android.util.Size
+import android.view.LayoutInflater
+import android.widget.*
+import android.content.res.Configuration
+
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.*
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.activity.enableEdgeToEdge
+import androidx.activity.OnBackPressedCallback
 
 class Gambar : AppCompatActivity() {
 
@@ -35,12 +42,26 @@ class Gambar : AppCompatActivity() {
     }
 
     private fun Awal() {
+        ViewCompat.setOnApplyWindowInsetsListener(pusat) { view, insets ->
+            val bars = insets.getInsets( WindowInsetsCompat.Type.systemBars() )
+
+            view.setPadding( bars.left, bars.top, bars.right, bars.bottom )
+            insets
+        }
         MuatFolder()
         MuatFile(null)
     }
 
-    private fun Keluar() {}
-    private fun Tombol() {}
+    private fun Keluar() {finish()}
+    
+    private fun GantiTema(){
+        val dark = (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
+
+        AppCompatDelegate.setDefaultNightMode(
+            if (dark) AppCompatDelegate.MODE_NIGHT_NO
+            else AppCompatDelegate.MODE_NIGHT_YES
+        )
+    }
 
     private fun MuatFolder() {
         tempatFolder.removeAllViews()
@@ -49,13 +70,26 @@ class Gambar : AppCompatActivity() {
         for (folder in daftarFolder) {
             val item = LayoutInflater.from(this).inflate(R.layout.item_tempat_folder, tempatFolder, false)
             val nama = item.findViewById<TextView>(R.id.nama)
+            val jumlah = item.findViewById<TextView>(R.id.jumlah)
+            val satu = item.findViewById<ImageView>(R.id.satu)
+            val dua = item.findViewById<ImageView>(R.id.dua)
+            val tiga = item.findViewById<ImageView>(R.id.tiga)
+            val empat = item.findViewById<ImageView>(R.id.empat)
             
-            // Mengambil property nama dari data class Folder
             nama.text = folder.nama 
+            val fileDiFolder = MediaImage(this@Gambar).getFile(folder)
+            jumlah.text = fileDiFolder.size.toString()
+            
+            val wadahGambar = listOf(satu, dua, tiga, empat)
+            for (i in wadahGambar.indices) {
+                if (i < fileDiFolder.size) {
+                    MuatBipmap(fileDiFolder[i], wadahGambar[i])
+                } else {
+                    wadahGambar[i].setImageDrawable(null)
+                }
+            }
             
             item.setOnClickListener {
-                // Muat file dari folder yang dipilih dan otomatis tutup drawer
-                val fileDiFolder = MediaImage(this@Gambar).getFile(folder)
                 MuatFile(fileDiFolder)
                 pusat.closeDrawer(GravityCompat.START)
             }
@@ -67,14 +101,12 @@ class Gambar : AppCompatActivity() {
         tempatFile.removeAllViews()
         
         if (terima.isNullOrEmpty()) {
-            // Perbaikan typo: R.layout_item_list_kosonh
             val item = LayoutInflater.from(this).inflate(R.layout.item_list_kosong, tempatFile, false)
             tempatFile.addView(item)
             item.setOnClickListener {
                 pusat.openDrawer(GravityCompat.START)
             }
         } else {
-            // Buat Grid SATU kali saja sebagai wadah semua gambar
             val itemGrid = LayoutInflater.from(this).inflate(R.layout.item_list_gambar, tempatFile, false)
             val grid = itemGrid.findViewById<GridLayout>(R.id.grid)
             tempatFile.addView(itemGrid)
@@ -83,15 +115,58 @@ class Gambar : AppCompatActivity() {
                 val ig = LayoutInflater.from(this).inflate(R.layout.item_hanya_gambar, grid, false)
                 val g = ig.findViewById<ImageView>(R.id.gambar)
                 
-                // Set gambar ke ImageView (Sebaiknya gunakan Glide/Coil di tahap produksi)
-                g.setImageURI(isi)
+                MuatBipmap(isi, g)
                 
                 g.setOnClickListener {
-                    // Pastikan PenampilGambar(this) sudah diimplementasi di file terpisah
-                     PenampilGambar(this).show(isi)
+                      PenampilGambar(this).show(isi)
                 }
                 grid.addView(ig)
             }
+        }
+    }
+
+    private fun MuatBipmap(uri: Uri, imageView: ImageView) {
+        Thread {
+            try {
+                val bitmap: Bitmap = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                    contentResolver.loadThumbnail(uri, Size(300, 300), null)
+                } else {
+                    MediaStore.Images.Media.getBitmap(contentResolver, uri)
+                }
+                
+                runOnUiThread {
+                    imageView.setImageBitmap(bitmap)
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }.start()
+    }
+    
+    private fun Tombol(){
+        onBackPressedDispatcher.addCallback(this,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    if(pusat.isDrawerOpen(GravityCompat.START)){
+                        pusat.closeDrawer(GravityCompat.START)
+                    }else{Keluar()}
+                }
+            }
+        )
+        Klik(findViewById<ImageView>(R.id.nav)).sekali{
+            pusat.openDrawer(GravityCompat.START)
+        }
+        
+        Klik(findViewById<ImageView>(R.id.tutup)).sekali{
+            pusat.closeDrawer(GravityCompat.START)
+        }
+        
+        Klik(findViewById<ImageView>(R.id.keluar)).sekali{
+            Keluar()
+        }
+        
+        Klik(findViewById<LinearLayout>(R.id.tema)).sekali{
+            GantiTema()
         }
     }
 }

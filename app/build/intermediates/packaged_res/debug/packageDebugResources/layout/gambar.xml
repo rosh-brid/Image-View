@@ -9,7 +9,6 @@
     <LinearLayout
          android:layout_height="match_parent"
          android:layout_width="match_parent"
-         android:background="#000000"
          android:orientation="vertical">
 
         <FrameLayout
@@ -17,7 +16,36 @@
              android:layout_width="match_parent"
              android:background="@drawable/bg_kotak"
              android:layout_margin="10dp"
-             android:backgroundTint="#75aaaaaa">
+             android:backgroundTint="@color/bg">
+
+            <ImageView
+                 android:layout_height="30dp"
+                 android:layout_width="30dp"
+                 android:src="@drawable/nav"
+                 android:layout_marginStart="10dp"
+                 android:layout_gravity="center_vertical|start"
+                 android:id="@+id/nav" />
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:gravity="center"
+                 android:layout_gravity="center">
+
+                <ImageView
+                     android:layout_height="35dp"
+                     android:layout_width="35dp"
+                     android:src="@drawable/gambar"
+                     android:layout_margin="5dp" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="18sp"
+                     android:textStyle="bold"
+                     android:text="@string/nama_apk" />
+
+            </LinearLayout>
 
         </FrameLayout>
 
@@ -33,7 +61,7 @@
     <LinearLayout
          android:layout_height="match_parent"
          android:layout_width="320dp"
-         android:background="#75aaaaaa"
+         android:background="@color/bg"
          android:orientation="vertical"
          android:layout_gravity="start">
 
@@ -42,9 +70,58 @@
              android:layout_width="match_parent"
              android:background="@drawable/bg_kotak"
              android:layout_margin="10dp"
-             android:backgroundTint="#000000">
+             android:backgroundTint="@color/ungu">
+
+            <ImageView
+                 android:layout_height="30dp"
+                 android:layout_width="30dp"
+                 android:src="@drawable/keluar"
+                 android:layout_marginStart="10dp"
+                 android:layout_gravity="center_vertical|start"
+                 android:id="@+id/keluar" />
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:gravity="center"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center"
+                 android:id="@+id/tema">
+
+                <ImageView
+                     android:layout_height="25dp"
+                     android:src="@drawable/tema"
+                     android:layout_width="25dp"
+                     android:layout_marginEnd="5dp" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="14sp"
+                     android:textStyle="italic"
+                     android:text="Theme" />
+
+            </LinearLayout>
+
+            <ImageView
+                 android:layout_height="30dp"
+                 android:layout_width="30dp"
+                 android:src="@drawable/tutup"
+                 android:layout_marginEnd="10dp"
+                 android:layout_gravity="center_vertical|end"
+                 android:id="@+id/tutup" />
 
         </FrameLayout>
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginBottom="10dp"
+             android:textSize="16sp"
+             android:layout_marginTop="20dp"
+             android:text="~~ List Image ~~"
+             android:textStyle="bold"
+             android:layout_gravity="center_horizontal" />
 
         <ScrollView
              android:layout_height="match_parent"

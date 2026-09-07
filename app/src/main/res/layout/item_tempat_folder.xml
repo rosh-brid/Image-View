@@ -49,7 +49,7 @@
              android:layout_height="wrap_content"
              android:layout_width="wrap_content"
              android:textSize="16sp"
-             android:textColor="#ffffff"
+             android:textColor="@color/tulisan"
              android:id="@+id/nama" />
 
         <TextView
@@ -57,7 +57,7 @@
              android:layout_width="wrap_content"
              android:layout_margin="5dp"
              android:textSize="14sp"
-             android:textColor="#ffffff"
+             android:textColor="@color/tulisan"
              android:textStyle="italic"
              android:id="@+id/jumlah" />
 

@@ -1,0 +1,5 @@
+<resources>
+    <string name="nama_apk">Image Viewer</string>
+    <string name="terpilih_kosong">Not Directory Selected</string>
+    <string name="klik_buka">Click to open</string>
+</resources>

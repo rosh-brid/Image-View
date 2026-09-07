@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,7 +22,16 @@ public final class GambarBinding implements ViewBinding {
   private final DrawerLayout rootView;
 
   @NonNull
+  public final ImageView keluar;
+
+  @NonNull
+  public final ImageView nav;
+
+  @NonNull
   public final DrawerLayout pusat;
+
+  @NonNull
+  public final LinearLayout tema;
 
   @NonNull
   public final LinearLayout tempatFile;
@@ -29,12 +39,21 @@ public final class GambarBinding implements ViewBinding {
   @NonNull
   public final GridLayout tempatFolder;
 
-  private GambarBinding(@NonNull DrawerLayout rootView, @NonNull DrawerLayout pusat,
-      @NonNull LinearLayout tempatFile, @NonNull GridLayout tempatFolder) {
+  @NonNull
+  public final ImageView tutup;
+
+  private GambarBinding(@NonNull DrawerLayout rootView, @NonNull ImageView keluar,
+      @NonNull ImageView nav, @NonNull DrawerLayout pusat, @NonNull LinearLayout tema,
+      @NonNull LinearLayout tempatFile, @NonNull GridLayout tempatFolder,
+      @NonNull ImageView tutup) {
     this.rootView = rootView;
+    this.keluar = keluar;
+    this.nav = nav;
     this.pusat = pusat;
+    this.tema = tema;
     this.tempatFile = tempatFile;
     this.tempatFolder = tempatFolder;
+    this.tutup = tutup;
   }
 
   @Override
@@ -64,7 +83,25 @@ public final class GambarBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.keluar;
+      ImageView keluar = ViewBindings.findChildViewById(rootView, id);
+      if (keluar == null) {
+        break missingId;
+      }
+
+      id = R.id.nav;
+      ImageView nav = ViewBindings.findChildViewById(rootView, id);
+      if (nav == null) {
+        break missingId;
+      }
+
       DrawerLayout pusat = (DrawerLayout) rootView;
+
+      id = R.id.tema;
+      LinearLayout tema = ViewBindings.findChildViewById(rootView, id);
+      if (tema == null) {
+        break missingId;
+      }
 
       id = R.id.tempat_file;
       LinearLayout tempatFile = ViewBindings.findChildViewById(rootView, id);
@@ -78,7 +115,14 @@ public final class GambarBinding implements ViewBinding {
         break missingId;
       }
 
-      return new GambarBinding((DrawerLayout) rootView, pusat, tempatFile, tempatFolder);
+      id = R.id.tutup;
+      ImageView tutup = ViewBindings.findChildViewById(rootView, id);
+      if (tutup == null) {
+        break missingId;
+      }
+
+      return new GambarBinding((DrawerLayout) rootView, keluar, nav, pusat, tema, tempatFile,
+          tempatFolder, tutup);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

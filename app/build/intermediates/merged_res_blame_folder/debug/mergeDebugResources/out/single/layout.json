@@ -1,15 +1,15 @@
 [
     {
+        "merged": "rosh.gambar.app-mergeDebugResources-31:/layout/gambar.xml",
+        "source": "rosh.gambar.app-main-34:/layout/gambar.xml"
+    },
+    {
         "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-mergeDebugResources-31:/layout/gambar.xml",
         "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-main-34:/layout/gambar.xml"
     },
     {
         "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-mergeDebugResources-31:/layout/item_list_kosong.xml",
         "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-main-34:/layout/item_list_kosong.xml"
-    },
-    {
-        "merged": "rosh.gambar.app-mergeDebugResources-31:/layout/item_list_kosong.xml",
-        "source": "rosh.gambar.app-main-34:/layout/item_list_kosong.xml"
     },
     {
         "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-mergeDebugResources-31:/layout/item_hanya_gambar.xml",

@@ -5,14 +5,21 @@
      android:layout_height="match_parent"
      android:layout_width="match_parent"
      android:gravity="center"
+     android:orientation="vertical"
      android:id="@+id/inti">
 
     <TextView
          android:layout_height="wrap_content"
          android:layout_width="wrap_content"
+         android:layout_margin="15dp"
          android:textSize="18sp"
          android:textColor="#fff000"
-         android:text="No Select"
+         android:text="@string/terpilih_kosong"
          android:textStyle="bold" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:text="@string/klik_buka"
+         android:layout_width="wrap_content" />
 
 </LinearLayout>
