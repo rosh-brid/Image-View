@@ -1,0 +1,27 @@
+R_DEF: Internal format may change without notice
+local
+drawable bg_kotak
+id dua
+id empat
+id gambar
+id gambar_file
+id grid
+id init
+id inti
+id jumlah
+id nama
+id nama_file
+id pusat
+id satu
+id tempat_file
+id tempat_folder
+id tiga
+id tutup
+layout gambar
+layout item_hanya_gambar
+layout item_list_gambar
+layout item_list_kosong
+layout item_tempat_folder
+layout pop_penampil_gambar
+style AppTheme
+style Base.AppTheme

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<manifest
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:label="Image Viewers"
+        android:theme="@style/AppTheme"
+        android:supportsRtl="true"
+        android:allowBackup="true">
+        <activity 
+            android:name=".Gambar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

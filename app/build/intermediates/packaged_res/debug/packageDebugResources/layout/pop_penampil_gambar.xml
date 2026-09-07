@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="#25aaaaaa"
+     android:gravity="center"
+     android:id="@+id/inti">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_margin="10dp"
+         android:textColor="#ffffff"
+         android:id="@+id/nama_file"
+         android:textStyle="bold"
+         android:layout_gravity="start|top" />
+
+    <ImageView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:id="@+id/gambar_file"
+         android:layout_gravity="center" />
+
+    <TextView
+         android:layout_height="50dp"
+         android:layout_width="50dp"
+         android:gravity="center"
+         android:background="@drawable/bg_kotak"
+         android:layout_margin="10dp"
+         android:textSize="18sp"
+         android:backgroundTint="#75ffaaaa"
+         android:textColor="#000000"
+         android:textStyle="bold"
+         android:id="@+id/tutup"
+         android:layout_gravity="end|top"
+         android:text="X" />
+
+</FrameLayout>

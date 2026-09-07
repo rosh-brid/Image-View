@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-debug-32:/layout_pop_penampil_gambar.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-main-34:/layout/pop_penampil_gambar.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-debug-32:/layout_item_list_kosong.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-main-34:/layout/item_list_kosong.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-debug-32:/layout_item_tempat_folder.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-main-34:/layout/item_tempat_folder.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-debug-32:/layout_item_list_gambar.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-main-34:/layout/item_list_gambar.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-debug-32:/layout_item_hanya_gambar.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-main-34:/layout/item_hanya_gambar.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-debug-32:/layout_gambar.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-main-34:/layout/gambar.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-debug-32:/drawable_bg_kotak.xml.flat",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.6.1/rosh.gambar.app-main-34:/drawable/bg_kotak.xml"
+    },
+    {
+        "merged": "rosh.gambar.app-debug-32:/layout_item_list_kosong.xml.flat",
+        "source": "rosh.gambar.app-main-34:/layout/item_list_kosong.xml"
+    }
+]

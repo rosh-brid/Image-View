@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:gravity="center_vertical"
+     android:orientation="horizontal"
+     android:id="@+id/init">
+
+    <GridLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_margin="10dp"
+         android:columnCount="2">
+
+        <ImageView
+             android:layout_height="20dp"
+             android:layout_width="20dp"
+             android:layout_margin="2dp"
+             android:id="@+id/satu" />
+
+        <ImageView
+             android:layout_height="20dp"
+             android:layout_width="20dp"
+             android:layout_margin="2dp"
+             android:id="@+id/dua" />
+
+        <ImageView
+             android:layout_height="20dp"
+             android:layout_width="20dp"
+             android:layout_margin="2dp"
+             android:id="@+id/tiga" />
+
+        <ImageView
+             android:layout_height="20dp"
+             android:layout_width="20dp"
+             android:layout_margin="2dp"
+             android:id="@+id/empat" />
+
+    </GridLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:orientation="vertical">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="16sp"
+             android:textColor="#ffffff"
+             android:id="@+id/nama" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_margin="5dp"
+             android:textSize="14sp"
+             android:textColor="#ffffff"
+             android:textStyle="italic"
+             android:id="@+id/jumlah" />
+
+    </LinearLayout>
+
+</LinearLayout>
