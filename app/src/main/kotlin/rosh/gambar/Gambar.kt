@@ -33,6 +33,7 @@ class Gambar : AppCompatActivity() {
         PasangId()
         Tombol()
         Awal()
+        Izin()
     }
 
     private fun PasangId() {
@@ -48,8 +49,6 @@ class Gambar : AppCompatActivity() {
             view.setPadding( bars.left, bars.top, bars.right, bars.bottom )
             insets
         }
-        MuatFolder()
-        MuatFile(null)
     }
 
     private fun Keluar() {finish()}
@@ -169,4 +168,64 @@ class Gambar : AppCompatActivity() {
             GantiTema()
         }
     }
+    
+    private fun Izin() {
+    if (!BacaIzin()) {
+        MintaIzin()
+    }else{
+        MuatFolder()
+        MuatFile(null)
+    }
+}
+
+private fun BacaIzin(): Boolean {
+
+    return if (Build.VERSION.SDK_INT >= 34) {
+        val gambar = checkSelfPermission(
+            android.Manifest.permission.READ_MEDIA_IMAGES
+        ) == android.content.pm.PackageManager.PERMISSION_GRANTED
+
+        val pilihan = checkSelfPermission(
+            android.Manifest.permission.READ_MEDIA_VISUAL_USER_SELECTED
+        ) == android.content.pm.PackageManager.PERMISSION_GRANTED
+        gambar || pilihan
+
+    } else if (Build.VERSION.SDK_INT >= 33) {
+        checkSelfPermission(
+            android.Manifest.permission.READ_MEDIA_IMAGES
+        ) == android.content.pm.PackageManager.PERMISSION_GRANTED
+    } else {
+        checkSelfPermission(
+            android.Manifest.permission.READ_EXTERNAL_STORAGE
+        ) == android.content.pm.PackageManager.PERMISSION_GRANTED
+    }
+}
+
+private fun MintaIzin() {
+    if (Build.VERSION.SDK_INT >= 34) {
+        requestPermissions(
+            arrayOf(
+                android.Manifest.permission.READ_MEDIA_IMAGES,
+                android.Manifest.permission.READ_MEDIA_VISUAL_USER_SELECTED
+            ), 100
+        )
+
+    } else if (Build.VERSION.SDK_INT >= 33) {
+        requestPermissions(
+            arrayOf(
+                android.Manifest.permission.READ_MEDIA_IMAGES
+            ), 100
+        )
+    } else {
+        requestPermissions(
+            arrayOf(
+                android.Manifest.permission.READ_EXTERNAL_STORAGE
+            ), 100
+        )
+    }
+    if(BacaIzin()){
+        MuatFolder()
+        MuatFile(null)
+    }
+}
 }

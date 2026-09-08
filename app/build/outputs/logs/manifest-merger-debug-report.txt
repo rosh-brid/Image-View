@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:2:1-26:12
+ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:2:1-27:12
 MERGED from [logger-runtime.aar] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.6.1/transforms/90e847ef28838ab7a3e8a195c5c9bdea/transformed/logger-runtime/AndroidManifest.xml:2:1-21:12
 MERGED from [androidx.databinding:viewbinding:8.9.1] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.6.1/transforms/bde3d1bffb27e8ccbda12d709c019411/transformed/viewbinding-8.9.1/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.6.1/transforms/e0e2d4b85430d5f83823d4268adfdb0b/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
@@ -66,9 +66,13 @@ uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:7:5-79
 	android:name
 		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:7:22-77
+uses-permission#android.permission.READ_MEDIA_VISUAL_USER_SELECTED
+ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:8:5-90
+	android:name
+		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:8:22-87
 application
-ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:9:5-25:19
-INJECTED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:9:5-25:19
+ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:10:5-26:19
+INJECTED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:10:5-26:19
 MERGED from [logger-runtime.aar] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.6.1/transforms/90e847ef28838ab7a3e8a195c5c9bdea/transformed/logger-runtime/AndroidManifest.xml:14:5-19:19
 MERGED from [logger-runtime.aar] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.6.1/transforms/90e847ef28838ab7a3e8a195c5c9bdea/transformed/logger-runtime/AndroidManifest.xml:14:5-19:19
 MERGED from [com.google.android.material:material:1.12.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.6.1/transforms/e0e2d4b85430d5f83823d4268adfdb0b/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
@@ -90,37 +94,37 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /data/user/
 	android:extractNativeLibs
 		INJECTED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml
 	android:requestLegacyExternalStorage
-		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:10:9-52
+		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:11:9-52
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] /data/user/0/com.tom.rv2ide/files/home/.gradle/caches/9.6.1/transforms/f0f2dae4b5e126e6bef734df2a36a7d1/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:15:9-35
-	android:label
-		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:11:9-41
-	android:roundIcon
-		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:13:9-43
-	android:icon
-		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:12:9-38
-	android:allowBackup
 		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:16:9-35
+	android:label
+		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:12:9-41
+	android:roundIcon
+		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:14:9-43
+	android:icon
+		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:13:9-38
+	android:allowBackup
+		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:17:9-35
 	android:theme
-		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:14:9-40
+		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:15:9-40
 activity#rosh.gambar.Gambar
-ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:17:9-24:20
+ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:18:9-25:20
 	android:exported
-		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:19:13-36
+		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:20:13-36
 	android:name
-		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:18:13-35
+		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:19:13-35
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:20:13-23:29
+ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:21:13-24:29
 action#android.intent.action.MAIN
-ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:21:17-69
+ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:21:25-66
+		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:22:17-77
+ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:22:27-74
+		ADDED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml:23:27-74
 uses-sdk
 INJECTED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /storage/emulated/0/coding/Gambar/app/src/main/AndroidManifest.xml
