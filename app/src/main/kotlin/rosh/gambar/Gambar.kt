@@ -11,6 +11,7 @@ import android.provider.MediaStore
 import android.util.Size
 import android.view.LayoutInflater
 import android.widget.*
+import android.content.*
 import android.content.res.Configuration
 
 import androidx.appcompat.app.AppCompatActivity
@@ -34,6 +35,7 @@ class Gambar : AppCompatActivity() {
         Tombol()
         Awal()
         Izin()
+        pusat.post { BacaIntent() }
     }
 
     private fun PasangId() {
@@ -223,9 +225,47 @@ private fun MintaIzin() {
             ), 100
         )
     }
-    if(BacaIzin()){
-        MuatFolder()
-        MuatFile(null)
+        if(BacaIzin()){
+            MuatFolder()
+            MuatFile(null)
+        }
+    }
+    
+    private fun BacaIntent() {
+
+    val aksi = intent.action
+
+    when (aksi) {
+
+        Intent.ACTION_VIEW -> {
+            val isi = intent.data
+
+            if (isi != null) {
+                PenampilGambar(this).show(isi)
+            }
+        }
+
+        Intent.ACTION_SEND -> {
+            val isi =
+                intent.getParcelableExtra<Uri>(
+                    Intent.EXTRA_STREAM
+                )
+
+            if (isi != null) {
+                PenampilGambar(this).show(isi)
+            }
+        }
+
+        Intent.ACTION_SEND_MULTIPLE -> {
+            val isi =
+                intent.getParcelableArrayListExtra<Uri>(
+                    Intent.EXTRA_STREAM
+                )
+
+            if (!isi.isNullOrEmpty()) {
+                MuatFile(isi)
+            }
+        }
     }
 }
 }
